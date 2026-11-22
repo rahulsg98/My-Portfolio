@@ -1,34 +1,22 @@
-import { BrowserRouter } from "react-router-dom"
-import {
-  About, 
-  Contact,
-  Experience,
-  Hero,
-  Navbar,
-  Tech,
-  Works,
-  StarsCanvas
-} from './components'
+import { About, Achievements, Contact, Experience, Footer, Hero, Navbar, StarsCanvas, Tech, Works } from "./components";
+import { CursorGlow } from "./components/ui/effects";
 
-const App = () => {
-  return (
-    <BrowserRouter>
-      <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
-          <Navbar />
-          <Hero />
-        </div>
-        <About />
-        <Experience />
-        <Tech />
-        <Works />
-        <div className="relative z-0 ">
-          <Contact />
-          <StarsCanvas />
-        </div>
-      </div>
-    </BrowserRouter>
-  )
-}
+const App = () => (
+  <div className="noise relative z-0 min-h-screen overflow-x-clip">
+    <StarsCanvas />
+    <CursorGlow />
+    <Navbar />
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Tech />
+      <Works />
+      <Achievements />
+      <Contact />
+    </main>
+    <Footer />
+  </div>
+);
 
-export default App
+export default App;

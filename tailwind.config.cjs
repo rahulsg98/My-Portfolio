@@ -1,25 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx}"],
-  mode: "jit",
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        primary: "#050816",
-        secondary: "#aaa6c3",
-        tertiary: "#151030",
-        "black-100": "#100d25",
-        "black-200": "#090325",
-        "white-100": "#f3f3f3",
+        primary: "#05050f",
+        secondary: "#a1a1b5",
+        tertiary: "#10101f",
+        "black-100": "#0c0c1a",
+        "white-100": "#ededf5",
       },
-      boxShadow: {
-        card: "0px 35px 120px -15px #211e35",
+      fontFamily: {
+        display: ['"Space Grotesk"', "Inter", "sans-serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ['"JetBrains Mono"', "monospace"],
       },
-      screens: {
-        xs: "450px",
+      screens: { xs: "450px" },
+      keyframes: {
+        shimmer: { "0%": { backgroundPosition: "0% 50%" }, "100%": { backgroundPosition: "200% 50%" } },
+        pulseRing: { "0%": { transform: "scale(1)", opacity: 0.7 }, "100%": { transform: "scale(2.4)", opacity: 0 } },
       },
-      backgroundImage: {
-        "hero-pattern": "url('/src/assets/herobg.png')",
+      animation: {
+        shimmer: "shimmer 6s linear infinite",
+        "pulse-ring": "pulseRing 1.6s ease-out infinite",
       },
     },
   },

@@ -10,9 +10,9 @@ export const profile = {
     "Builder of AI-powered tools",
   ],
   tagline:
-    "I build fintech-grade backends and polished mobile and web apps. Right now I'm shipping GraphQL APIs, event-driven systems and React Native features for Varo Bank at Accenture.",
+    "Full-stack engineer with 2+ years building a US digital bank's mobile banking platform at Accenture: Java, Spring Boot and GraphQL services, Kafka event pipelines, and React Native features used by 50,000+ customers.",
   current: { company: "Accenture", client: "Varo Bank" },
-  location: "Bangalore, India",
+  location: "Bengaluru, India",
   email: "reachrahulgurjar24@gmail.com",
   resume: "/Rahul_Singh_Gurjar_Resume.pdf",
   socials: {
@@ -32,7 +32,7 @@ export const navLinks = [
 
 export const stats = [
   { value: 1, suffix: "M+", label: "push notifications delivered every month" },
-  { value: 70, suffix: "+", label: "merge requests shipped to production" },
+  { value: 150, suffix: "+", label: "merge requests shipped under code review" },
   { value: 50, suffix: "K+", label: "users on Plaid & Pinwheel flows I built" },
   { value: 1000, suffix: "+", label: "DSA problems solved" },
 ];
@@ -46,54 +46,72 @@ export const education = {
 
 export const experiences = [
   {
-    title: "Associate Software Engineer",
+    title: "Software Engineer",
+    promotion: "Aug 2026, from Associate Software Engineer (Jul 2024 – Jul 2026)",
     company: "Accenture",
-    client: "Client: Varo Bank (US)",
-    location: "Bangalore, Karnataka",
+    client: "Client: Varo Bank, a US digital bank",
+    location: "Bengaluru, India",
     date: "Jul 2024 – Present",
     current: true,
     monogram: "A",
     gradient: "linear-gradient(135deg,#a855f7,#ec4899)",
     points: [
-      "Designed the GraphQL schema and resolvers end-to-end (Spring Boot → Apollo GraphOS → React Native), cutting over-fetching by **30%** with optimised queries and client-side caching.",
-      "Architected a push-notification pipeline on Kafka topics with an AWS SNS delivery service (device tokens, topic fan-out), reliably delivering **1M+ notifications a month**.",
-      "Built a pub-sub flow for account funding so users can background the step and resume later, improving reliability and reducing drop-off in multi-step onboarding.",
-      "Integrated Plaid and Pinwheel for bank linking and income verification for **50,000+ users**, meeting compliance and data-security requirements.",
-      "Shipped **70+ merge requests** across backend services, event-driven systems and mobile UI; resolved **15+ production incidents** across APIs, caching, messaging and rendering.",
+      "Designed the event-driven push-notification pipeline: events flow through Kafka topics and AWS SNS manages device tokens and topic fan-out, delivering **1M+ notifications a month**. Also built token registration and notification handling in the app.",
+      "Designed GraphQL schemas and resolvers in Spring Boot, exposed through Apollo GraphOS to the React Native app; restructured queries and set up Apollo Client caching, cutting over-fetching by **30%**.",
+      "Reworked onboarding's account-funding step with a pub-sub design so it runs in the background and completes only after confirmation; delivered both the backend event flow and the multi-step screens, reducing drop-off.",
+      "Integrated Plaid (bank linking) and Pinwheel (income verification), used by **50,000+ customers**, meeting compliance and security requirements for financial data.",
+      "Released features behind Statsig flags and ran A/B experiments across **3+ concurrent rollouts**, tracking adoption with Segment and Amplitude.",
+      "Resolved **15+ production incidents** using Grafana monitoring and shipped **150+ merge requests** under strict code review; wrote Kotlin for Android-specific needs.",
     ],
-    tech: ["Spring Boot", "Kotlin", "GraphQL", "gRPC", "Apollo GraphOS", "Kafka", "AWS SNS", "React Native", "TypeScript"],
+    tech: ["Java", "Spring Boot", "GraphQL", "Apollo", "Kafka", "AWS SNS", "gRPC", "React Native", "TypeScript", "Kotlin", "Statsig", "Grafana"],
   },
   {
     title: "Software Engineering Trainee",
     company: "Newgen Software",
-    client: "Client: top US-based bank",
-    location: "Noida, Uttar Pradesh",
+    client: "Client: Bank of The Bahamas",
+    location: "Noida, India",
     date: "Jan 2024 – Jul 2024",
     monogram: "N",
     gradient: "linear-gradient(135deg,#22d3ee,#3b82f6)",
     points: [
-      "Led development of an appointment-scheduling app that streamlined account opening and retail loan processes.",
-      "Introduced automated booking and rescheduling, improving efficiency by **20%** and reducing manual errors.",
-      "Integrated the scheduler with the bank's existing platforms for smooth data flow, cutting customer dissatisfaction by **15%**.",
+      "Led development of an appointment-scheduling web application that streamlined the account-opening and retail-loan journeys.",
+      "Automated booking and rescheduling, raising process efficiency by **20%** by removing manual steps and errors.",
+      "Integrated the scheduler with the bank's existing platforms over REST APIs, contributing to a **15%** reduction in customer dissatisfaction.",
     ],
     tech: ["Java", "JavaScript", "MSSQL", "REST APIs", "Agile"],
+  },
+  {
+    title: "SDE Intern",
+    company: "NextSolutions",
+    client: "Remote",
+    location: "Faridabad, India",
+    date: "May 2023 – Jul 2023",
+    monogram: "NS",
+    gradient: "linear-gradient(135deg,#f59e0b,#ef4444)",
+    points: [
+      "Developed Property24*7, a web app for property brokers to list properties with full details and track interested buyers.",
+      "Built the back end with Node.js, Express and MongoDB REST APIs and integrated it with the React front end.",
+      "Developed, tested and debugged features across the MERN stack and connected the app to third-party services.",
+    ],
+    tech: ["React", "Node.js", "Express", "MongoDB"],
   },
 ];
 
 export const skillGroups = [
-  { title: "Languages", items: ["Java", "Kotlin", "TypeScript", "JavaScript", "C++", "Python", "SQL"] },
-  { title: "Backend", items: ["Spring Boot", "GraphQL", "gRPC", "Kafka", "Node.js", "Express", "REST"] },
-  { title: "Frontend & Mobile", items: ["React", "React Native", "Next.js", "Redux Toolkit", "Tailwind", "Three.js"] },
-  { title: "Cloud & Data", items: ["AWS", "SNS", "Apollo GraphOS", "MySQL", "MongoDB", "Oracle SQL", "Prisma"] },
-  { title: "Tools", items: ["Git", "Jest", "Vitest", "Postman", "Figma", "Claude API"] },
+  { title: "Languages", items: ["Java", "TypeScript", "JavaScript", "Kotlin", "Python", "C++", "SQL"] },
+  { title: "Backend", items: ["Spring Boot", "GraphQL", "gRPC", "REST APIs", "Apache Kafka", "Node.js", "Express", "Microservices"] },
+  { title: "Frontend & Mobile", items: ["React Native", "React", "Next.js", "Redux Toolkit", "Apollo Client", "Tailwind CSS", "Material UI"] },
+  { title: "Cloud & Data", items: ["AWS (SNS)", "MySQL", "MongoDB", "Oracle SQL", "MSSQL", "Prisma", "SQLite"] },
+  { title: "AI", items: ["LLM agents (Claude)", "Gemini Nano", "ONNX Runtime", "Speech-to-text", "Text-to-speech"] },
+  { title: "Testing & Tools", items: ["Jest", "Vitest", "GitHub Actions", "GitLab", "Postman", "Statsig", "Amplitude", "Segment", "Grafana", "Braze", "Figma"] },
 ];
 
 // Words that orbit in the 3D skill sphere
 export const sphereSkills = [
   "Java", "Spring Boot", "Kotlin", "GraphQL", "Kafka", "AWS", "React Native", "TypeScript",
   "React", "Next.js", "Node.js", "gRPC", "Apollo", "MongoDB", "MySQL", "Redux", "Tailwind",
-  "Three.js", "C++", "Python", "Prisma", "Jest", "Express", "SNS", "REST", "Git",
-  "Figma", "Postman", "Claude", "SQL",
+  "Python", "C++", "Prisma", "Jest", "Express", "SNS", "REST", "Statsig",
+  "Grafana", "Claude", "Gemini Nano", "ONNX", "Vitest",
 ];
 
 export const projectFilters = ["All", "AI", "Extensions", "Full Stack", "Mobile"];
@@ -106,9 +124,9 @@ export const projects = [
     year: "2026",
     tagline: "An AI mock interviewer that listens, pushes back and grades you",
     description:
-      "A hands-free voice interview coach for Ubuntu. The interviewer plans an agenda from your resume, asks follow-ups, sets traps, watches the code you type and writes feedback, a report and study notes after every round. Includes a company-specific Round Builder and a progress dashboard. Speech, voice and data stay on device.",
+      "A hands-free voice interviewer for Ubuntu that plans timed rounds (15 min to 2 hr) across resume, theory, DSA, machine coding, system design and behavioral, then asks follow-ups and reviews your code. Local speech-to-text with NVIDIA Parakeet (9.2% WER vs 9.8% for Whisper small.en, about 8x faster), a natural Kokoro voice and OpenCV eye-contact analysis. Only reasoning goes to Claude; audio, video and data stay on device.",
     image: interviewGym,
-    tags: ["Python", "Claude", "Speech-to-Text", "TTS", "Computer Vision"],
+    tags: ["Python", "PySide6", "Claude", "ONNX Runtime", "OpenCV"],
     github: "https://github.com/rahulsg98/Interview-Gym",
     accent: "#a855f7",
   },
@@ -119,9 +137,9 @@ export const projects = [
     year: "2026",
     tagline: "Study Mode for YouTube",
     description:
-      "A Manifest V3 Chromium extension that only lets study lectures play while Study Mode is on. Videos are classified on-device, with a calm overlay for blocked or uncertain videos and a deliberate flow to switch the mode off.",
+      "Published on the Chrome Web Store. A Manifest V3 extension that pauses every YouTube video in Study Mode and classifies it before playback: lectures play, distractions are blocked, unclear videos ask you. Classification runs fully on-device with keyword scoring and Chrome's built-in Gemini Nano. 32 Vitest test files and GitHub Actions CI.",
     image: studyGate,
-    tags: ["TypeScript", "Manifest V3", "Vitest", "Chrome APIs"],
+    tags: ["TypeScript", "Manifest V3", "Gemini Nano", "Vitest"],
     github: "https://github.com/rahulsg98/study-gate",
     accent: "#6366f1",
   },
@@ -144,7 +162,7 @@ export const projects = [
     year: "2023",
     tagline: "Location-based stay booking",
     description:
-      "An accommodation booking platform with Google sign-in (+20% new sign-ups), dynamic property listings and a smooth booking flow.",
+      "An accommodation booking platform with a dynamic property showcase, an end-to-end booking flow and login with Google, GitHub or email. Google sign-in lifted new registrations by 20%.",
     tags: ["Next.js", "TypeScript", "Prisma", "Tailwind"],
     github: "https://github.com/rahulsg98/TourPulse",
     live: "https://tour-pulse.vercel.app/",
@@ -202,6 +220,6 @@ export const projects = [
 export const achievements = [
   { title: "CodeChef SnackDown", detail: "Top 2% among 75,000 participants", date: "2021", icon: "🏆" },
   { title: "LeetCode", detail: "Peak contest rating 1600", date: "2023", icon: "⚡", link: "https://leetcode.com/u/rahul_9_8/" },
-  { title: "Hacktoberfest", detail: "Two-time contributor, recognised for impactful open-source PRs", date: "2022", icon: "🎃" },
+  { title: "Hacktoberfest", detail: "Open-source contributor two years running", date: "2021 – 2022", icon: "🎃" },
   { title: "Problem solving", detail: "1,000+ problems solved across platforms", date: "Ongoing", icon: "🧠" },
 ];

@@ -9,7 +9,7 @@ import { PinIcon } from "./ui/Icons";
 
 const ExperienceCard = ({ exp, index }) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.2, 0.8)} className="relative pl-14 sm:pl-20">
-    <div className="absolute left-0 sm:left-2 top-1 grid place-items-center w-11 h-11 rounded-2xl font-display font-bold text-white text-[18px] shadow-[0_0_30px_rgba(168,85,247,.35)]" style={{ background: exp.gradient }}>
+    <div className="absolute left-0 sm:left-2 top-1 grid place-items-center w-11 h-11 rounded-2xl font-display font-bold text-white text-[16px] shadow-[0_0_30px_rgba(168,85,247,.35)]" style={{ background: exp.gradient }}>
       {exp.monogram}
     </div>
 
@@ -20,6 +20,11 @@ const ExperienceCard = ({ exp, index }) => (
           <p className="mt-1 text-[16px] font-medium text-white-100">
             {exp.company} <span className="text-secondary font-normal">· {exp.client}</span>
           </p>
+          {exp.promotion && (
+            <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-violet-500/10 border border-violet-400/20 px-2.5 py-0.5 text-[12px] text-violet-200">
+              ↑ Promoted {exp.promotion}
+            </p>
+          )}
         </div>
         <div className="sm:text-right">
           <span className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-[12px] font-mono ${exp.current ? "bg-emerald-400/10 text-emerald-300 border border-emerald-400/20" : "bg-white/5 text-secondary border border-white/10"}`}>

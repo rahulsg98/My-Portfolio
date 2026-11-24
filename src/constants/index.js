@@ -141,6 +141,7 @@ export const projects = [
     image: studyGate,
     tags: ["TypeScript", "Manifest V3", "Gemini Nano", "Vitest"],
     github: "https://github.com/rahulsg98/study-gate",
+    store: "https://chromewebstore.google.com/detail/studygate-%E2%80%93-study-mode-fo/chihjbpndanacbooackoljoaipakhhep",
     accent: "#6366f1",
   },
   {

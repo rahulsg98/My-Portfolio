@@ -73,6 +73,11 @@ const ProjectCard = ({ project, big }) => (
       <a href={project.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white/[0.06] border border-white/10 px-4 py-2 text-[13px] font-medium text-white hover:bg-white/10 transition-colors">
         <GithubIcon width={16} height={16} /> Code
       </a>
+      {project.store && (
+        <a href={project.store} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium text-white transition-shadow hover:shadow-[0_0_20px_rgba(99,102,241,.5)]" style={{ background: project.accent }}>
+          <ExternalIcon width={15} height={15} /> Chrome Web Store
+        </a>
+      )}
       {project.live && (
         <a href={project.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-[13px] font-medium text-white transition-shadow hover:shadow-[0_0_20px_rgba(244,63,94,.45)]" style={{ background: project.accent }}>
           <ExternalIcon width={15} height={15} /> Live demo
